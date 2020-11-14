@@ -40,11 +40,11 @@ def data_visual():
     """
     print("|================GRAPHICAL REPRESENTATION===============|")
     print("\n\t\t1.Show DATA In Line Graph\n")
-    print("\t\t2.Show DATA in Scatter Graph\n")
-    print("\t\t3.Show DATA in Dotted Graph\n")
+    print("\t\t2.Show DATA in Splitted Line Graph\n")
+    print("\t\t3.Show DATA in Nested Pie Chart \n")
     print("\t\t4.Show DATA in Bar Graph\n")
-    print("\t\t5.Show DATA in Splitted Pie Chart\n")
-    print("\t\t6.Show DATA in Histograph\n")
+    print("\t\t5.Show DATA in Splitted Bar Graphs\n")
+    print("\t\t6.Show DATA in Splitted Pie Chart\n")
     print("\t\t7.Show DATA in Pie Chart\n")
     print("\t\t8.EXIT\n")
 
@@ -70,15 +70,16 @@ def data_visual():
         bargraph()
         data_visual()
 
-    elif user_input == 5:  # |shape graphs|
-        piecharts()
+    elif user_input == 5:  # |Splitted Bar graphs|
+        bargraphs()
         data_visual()
 
-    elif user_input == 6:  # |Histograph|
+    elif user_input == 6:  # |Splitted Piecharts|
+        splitted_piecharts()
         data_visual()
 
     elif user_input == 7:  # |Piechart|
-        splitted_piecharts()
+        piecharts()
         data_visual()
 
     elif user_input ==8:

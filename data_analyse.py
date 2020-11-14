@@ -8,44 +8,43 @@ def data_analyse_menu():
     print("\t\t--Enter--3---Exit\n")
     r = int(input("Enter the values:\t\t"))
 
-    if r==1:
+    if r == 1:
         maxima()
 
-    if r==2:
+    if r == 2:
         minima()
 
-    if r==3:
-        exit()        
-
+    if r == 3:
+        exit()
 
 
 def maxima():
     """
     find maximum of the data
     """
-    v = pd.read_csv("H:\PROGRAMMING\PYTHON\Class 12th Python Project\csv_data\kjpcjs.csv")
-    lang = ['Kotlin','Java','Python','C++','JavaScript']
-    mx =list()
+    v = pd.read_csv(
+        "H:\PROGRAMMING\PYTHON\Class 12th Python Project\csv_data\kjpcjs.csv")
+    lang = ['Kotlin', 'Java', 'Python', 'C++', 'JavaScript']
+    mx = list()
     for i in lang:
         x = max(v[i])
         mx.append(x)
 
+    for i in range(0, 5):
+        print(lang[i], "minimum gross is", mx[i])
 
-    for i in range (0,5):
-        print(lang[i],"minimum gross is",mx[i])
-    
+
 def minima():
     """
     This is a minima value 
     """
-    v = pd.read_csv("H:\PROGRAMMING\PYTHON\Class 12th Python Project\csv_data\kjpcjs.csv")
-    lang = ['Kotlin','Java','Python','C++','JavaScript']
-    mx =list()
+    v = pd.read_csv(
+        "H:\PROGRAMMING\PYTHON\Class 12th Python Project\csv_data\kjpcjs.csv")
+    lang = ['Kotlin', 'Java', 'Python', 'C++', 'JavaScript']
+    mx = list()
     for i in lang:
         x = min(v[i])
         mx.append(x)
 
-
-    for i in range (0,5):
-        print(lang[i],"minimum gross is",mx[i])
-      
+    for i in range(0, 5):
+        print(lang[i], "minimum gross is", mx[i])

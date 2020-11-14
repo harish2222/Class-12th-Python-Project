@@ -2,9 +2,8 @@ import psycopg2 as pc
 import pandas as pd
 import matplotlib.pyplot as mp
 
-from graphs import * 
+from graphs import *
 from menu import maincode
-
 
 
 def dbconn(db, usr, pswd):
@@ -14,7 +13,7 @@ def dbconn(db, usr, pswd):
 
 # def mysql_conn(parameter_list):
 #     """
-#     this module is for mysql connectivity 
+#     this module is for mysql connectivity
 #     """
 #     mydb = mysql.connector.connect(
 #         host = "localhost",
@@ -48,23 +47,18 @@ def data_visual():
     print("\t\t7.Show DATA in Pie Chart\n")
     print("\t\t8.EXIT\n")
 
-
     user_input = int(input("Enter the index value of the following choices:"))
 
     if user_input == 1:  # |here we will plot a line graph|
         linegraph()
         data_visual()
-            
-                        
 
     elif user_input == 2:  # |plotting a scatter graph|
         splitlinegraph()
         data_visual()
 
-
     elif user_input == 3:  # |plotting a dotted graph|
         data_visual()
-
 
     elif user_input == 4:  # |plotting a Bar graph|
         bargraph()
@@ -82,20 +76,16 @@ def data_visual():
         piecharts()
         data_visual()
 
-    elif user_input ==8:
+    elif user_input == 8:
         exit()
-        
-    
 
     elif user_input == "Null":
         print("Invalid request")
         data_visual()
-        
 
     elif user_input == "":
         print("Invalid request")
-        data_visual()   
+        data_visual()
 
     else:
         exit()
-        

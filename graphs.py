@@ -25,8 +25,7 @@ def linegraph():
     plt.figure(figsize=(10, 5), dpi=150)
     plt.style.use('seaborn')
     plt.gcf().autofmt_xdate()
-    plt.title('Trends Of PROGRAMMING Language', fontdict={
-              'fontweight': 'bold', 'fontsize': 22})
+    plt.title('Trends Of PROGRAMMING Language', fontdict={'fontweight': 'bold', 'fontsize': 22})
     plt.plot(data_date, java_data, 'r.-', linewidth=2, label="Java")
     plt.plot(data_date, kotlin_data, 'y.-', linewidth=2, label="Kotlin")
     plt.plot(data_date, c_data, 'g.-', linewidth=2, label="C++")

@@ -11,8 +11,7 @@ def linegraph():
     print("Line Graph Initializing")
     time.sleep(5)
     print("Line Graph Launching")
-    a = pd.read_csv(
-        "H:\\PROGRAMMING\\PYTHON\\Class 12th Python Project\\csv_data\\kjpcjs.csv")
+    a = pd.read_csv("H:\\PROGRAMMING\\PYTHON\\Class 12th Python Project\\csv_data\\kjpcjs.csv")
     a['Week'] = pd.to_datetime(a['Week'])
     data_date = a['Week']
     java_data = a['Java']
@@ -44,8 +43,7 @@ def splitlinegraph():
     """
     print("Split Graph Initalizing")
     time.sleep(3)
-    b = pd.read_csv(
-        "H:\\PROGRAMMING\\PYTHON\\Class 12th Python Project\\csv_data\\kjpcjs.csv")
+    b = pd.read_csv("H:\\PROGRAMMING\\PYTHON\\Class 12th Python Project\\csv_data\\kjpcjs.csv")
     print("Split Line Graph Initialized")
     b['Week'] = pd.to_datetime(b['Week'])
     data_date = b['Week']

@@ -1,4 +1,4 @@
-from data_analyse import maxima
+from data_analyse import data_analyse_menu, maxima
 import pandas as pd 
 import matplotlib.pyplot as plt
 import psycopg2 as pc
@@ -108,7 +108,7 @@ def maincode():
         print(csv_data)
         maincode()
     elif usr_input==6:
-        pass
+        data_analyse_menu()
         maincode()
 
     elif usr_input==7:

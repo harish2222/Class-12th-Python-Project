@@ -1,4 +1,4 @@
-from data_analyse import data_analyse_menu, maxima
+from data_analyse import data_analyse_menu
 import pandas as pd
 import matplotlib.pyplot as plt
 import psycopg2 as pc
@@ -16,7 +16,7 @@ def maincode(dbs,usr,pswd):
     """
     Main menu is given here
     """
-    print("Database Credentials")
+    print("Database Credentials Passed")
                           # Beter to fill dbconn(with the your credentials)
     db = dbconn(dbs, usr, pswd)
     cur = db.cursor()

@@ -30,7 +30,7 @@ and change it to
 1. CSV DATA from Google Trends
 2. Postgresql
 
-<code>pip install -r "path of the requirement.txt in double qoutes"  <code\>
+<code>pip install -r "path of the requirement.txt in double qoutes" 
 
 ## Remember I have used a Postgresql Database!!
 ### So make sure if you have the postgresql Database then use it .

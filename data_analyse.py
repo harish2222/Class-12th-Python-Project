@@ -3,7 +3,7 @@ import psycopg2 as pc
 
 
 def data_analyse_menu():
-    print("\t\t--Enter--1---Maximum trend of Language\n")
+    print("\t\t--Enter--1---Maximum Trend of Language\n")
     print("\t\t--Enter--2---Minimum Trend of Language\n")
     print("\t\t--Enter--3---Exit\n")
     r = int(input("Enter the values:\t\t"))

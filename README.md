@@ -24,14 +24,14 @@ change it to
 3. Pyscopg2 (Postgresql Database Connector)
 4. Matplotlib (For graph plotting)
 <br>
-<hr>
+
 ### BackEnd
 
 1. CSV DATA from Google Trends
 2. Postgresql
 
 <code>
-    pip install -r "path of the requirement.txt in double qoutes"
+    pip install -r "path of the requirement.txt in double qoutes"    
 <code\>
 
 <br\>
@@ -42,11 +42,11 @@ This project is specific to the csv files present in csv_data folder
 
 The database table is exact copy of kjpcjs.csv that i have converted to postgresql Database using Import tool Present in the Postgresql PgAdmin v==4.26
 
-# This includes 
+## This includes 
 1. Line graph 
 2. Bar Graphs
 3. Pie Charts
 
 # Updates will be done soon.
 # To add more Functionality
-**Copyright License
+**℗Copyright License

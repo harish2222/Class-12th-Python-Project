@@ -368,8 +368,3 @@ def bargraph():
     plt.bar(lang, avgs)
     plt.show()
 
-def nestedpie():
-    """
-    This is for nested pie chart 
-    """
-    pass

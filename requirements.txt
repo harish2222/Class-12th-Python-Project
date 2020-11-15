@@ -1,0 +1,4 @@
+pandas==1.1.2
+numpy==1.18.5
+matplotlib==3.3.2
+psycopg2==2.8.6

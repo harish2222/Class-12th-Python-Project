@@ -12,12 +12,13 @@ def wel():
     print("|=====================================Welcome TO HK TRENDS======================================|")
 
 
-def maincode():
+def maincode(dbs,usr,pswd):
     """
     Main menu is given here
     """
-
-    db = dbconn("googletrends_data", "postgres", "postgresql")
+    print("Database Credentials")
+                          # Beter to fill dbconn(with the your credentials)
+    db = dbconn(dbs, usr, pswd)
     cur = db.cursor()
 
     print("\n\t\tEnter--1--Print raw data in console\n")
@@ -37,10 +38,11 @@ def maincode():
     usr_input = int(input("Enter the Number :\t"))
 
     if usr_input == 1:
-        cur.execute("select * from programming_language.coding;")
+        qry = str(input("Enter the Query:"))
+        cur.execute(qry)
         row = cur.fetchall()
         print(row)
-        maincode()
+        maincode(datab,usr, pswd)
 
     elif usr_input == 2:
         data_visual()
@@ -54,7 +56,8 @@ def maincode():
         c = list()
 
         js = list()
-        cur.execute("select * from programming_language.coding;")
+        qry = str(input("Enter the Query:"))
+        cur.execute(qry)
         row = cur.fetchall()
         for r in row:
 
@@ -69,7 +72,7 @@ def maincode():
               "PYTHON": p, "C++": c, "JAVASCRIPT": js}
         c = pd.DataFrame(df)
         print(c)
-        maincode()
+        maincode(datab,usr, pswd)
 
     elif usr_input == 4:
         w = list()
@@ -79,7 +82,8 @@ def maincode():
         c = list()
         js = list()
         t = list()
-        cur.execute("select * from programming_language.coding;")
+        qry = str(input("Enter the Query:"))
+        cur.execute(qry)
         row = cur.fetchall()
         for r in row:
 
@@ -96,16 +100,16 @@ def maincode():
         t.append(c)
         t.append(js)
         print(t)
-        maincode()
+        maincode(datab,usr, pswd)
 
     elif usr_input == 5:
         csv_data = pd.read_csv(
             "H:\PROGRAMMING\PYTHON\Class 12th Python Project\csv_data\kjpcjs.csv")
         print(csv_data)
-        maincode()
+        maincode(datab,usr, pswd)
     elif usr_input == 6:
         data_analyse_menu()
-        maincode()
+        maincode(datab,usr, pswd)
 
     elif usr_input == 7:
         exit()
@@ -114,5 +118,8 @@ def maincode():
 
 
 if __name__ == '__main__':
+    datab = str(input("Enter the databse name:\t"))
+    usr = str(input("Enter user crendentials:\t"))
+    pswd = str(input("Enter the Password:\t"))
     wel()
-    maincode()
+    maincode(datab,usr, pswd)

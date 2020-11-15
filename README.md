@@ -1,4 +1,4 @@
-# This is A Simple complex 12th Python Class project #
+# This is A Complex 12th Python Class project #
 Almost 630 lines of code divided in four python files
 
 ** Version 1.0.0

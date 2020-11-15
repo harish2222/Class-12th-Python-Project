@@ -1,4 +1,4 @@
-### This is A Simple complex 12th Python Class project ###
+# This is A Simple complex 12th Python Class project #
 Almost 630 lines of code divided in four python files
 
 ** Version 1.0.0
@@ -17,14 +17,15 @@ Ex -- pandas==1.1.2
 change it to 
       pandas 
 
-## Technolgy used :-
-# Frontend and Database Connection
+# Technolgy used :-
+### Frontend and Database Connection
 1. Python
 2. Pandas (for data control)
 3. Pyscopg2 (Postgresql Database Connector)
 4. Matplotlib (For graph plotting)
-
-# BackEnd
+<br>
+<hr>
+### BackEnd
 
 1. CSV DATA from Google Trends
 2. Postgresql

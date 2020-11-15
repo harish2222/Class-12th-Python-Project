@@ -40,12 +40,11 @@ def data_visual():
     print("|================GRAPHICAL REPRESENTATION===============|")
     print("\n\t\t1.Show DATA In Line Graph\n")
     print("\t\t2.Show DATA in Splitted Line Graph\n")
-    print("\t\t3.Show DATA in Nested Pie Chart \n")
-    print("\t\t4.Show DATA in Bar Graph\n")
-    print("\t\t5.Show DATA in Splitted Bar Graphs\n")
-    print("\t\t6.Show DATA in Splitted Pie Chart\n")
-    print("\t\t7.Show DATA in Pie Chart\n")
-    print("\t\t8.EXIT\n")
+    print("\t\t3.Show DATA in Bar Graph\n")
+    print("\t\t4.Show DATA in Splitted Bar Graphs\n")
+    print("\t\t5.Show DATA in Splitted Pie Chart\n")
+    print("\t\t6.Show DATA in Pie Chart\n")
+    print("\t\t7.EXIT\n")
 
     user_input = int(input("Enter the index value of the following choices:"))
 
@@ -57,26 +56,24 @@ def data_visual():
         splitlinegraph()
         data_visual()
 
-    elif user_input == 3:  # |plotting a dotted graph|
-        data_visual()
-
-    elif user_input == 4:  # |plotting a Bar graph|
+    
+    elif user_input == 3:  # |plotting a Bar graph|
         bargraph()
         data_visual()
 
-    elif user_input == 5:  # |Splitted Bar graphs|
+    elif user_input == 4:  # |Splitted Bar graphs|
         bargraphs()
         data_visual()
 
-    elif user_input == 6:  # |Splitted Piecharts|
+    elif user_input == 5:  # |Splitted Piecharts|
         splitted_piecharts()
         data_visual()
 
-    elif user_input == 7:  # |Piechart|
+    elif user_input == 6:  # |Piechart|
         piecharts()
         data_visual()
 
-    elif user_input == 8:
+    elif user_input == 7:
         exit()
 
     elif user_input == "Null":

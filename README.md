@@ -27,7 +27,7 @@ change it to
 2. Postgresql
 
 <code>
-    pip install -r "<paths of the requirement.txt in double qoutes>"
+    pip install -r "path of the requirement.txt in double qoutes"
 <code\>
 
 <br\>

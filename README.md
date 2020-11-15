@@ -20,6 +20,9 @@ change it to
 ## Technolgy used :-
 # Frontend and Database Connection
 1. Python
+2. Pandas (for data control)
+3. Pyscopg2 (Postgresql Database Connector)
+4. Matplotlib (For graph plotting)
 
 # BackEnd
 

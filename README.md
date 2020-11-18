@@ -45,4 +45,8 @@ The database table is exact copy of kjpcjs.csv that i have converted to postgres
 
 ## Updates will be done soon.
 ## To add more Functionality
-©Copyright License
+
+## License && Copyright
+
+© Harish Kalva , HK-Industries [MIT LICENSE](LICENSE)
+

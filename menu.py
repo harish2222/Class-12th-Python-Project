@@ -104,7 +104,7 @@ def maincode(dbs,usr,pswd):
 
     elif usr_input == 5:
         csv_data = pd.read_csv(
-            "H:\PROGRAMMING\PYTHON\Class 12th Python Project\csv_data\kjpcjs.csv")
+            "kjpcjs.csv")
         print(csv_data)
         maincode(datab,usr, pswd)
     elif usr_input == 6:

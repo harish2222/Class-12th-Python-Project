@@ -23,7 +23,7 @@ def maxima():
     find maximum of the data
     """
     v = pd.read_csv(
-        "H:\PROGRAMMING\PYTHON\Class 12th Python Project\csv_data\kjpcjs.csv")
+        "kjpcjs.csv")
     lang = ['Kotlin', 'Java', 'Python', 'C++', 'JavaScript']
     mx = list()
     for i in lang:
@@ -39,7 +39,7 @@ def minima():
     This is a minima value 
     """
     v = pd.read_csv(
-        "H:\PROGRAMMING\PYTHON\Class 12th Python Project\csv_data\kjpcjs.csv")
+        "kjpcjs.csv")
     lang = ['Kotlin', 'Java', 'Python', 'C++', 'JavaScript']
     mx = list()
     for i in lang:

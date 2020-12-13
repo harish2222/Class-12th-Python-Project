@@ -1,7 +1,9 @@
+# Here are python libraries 
 import psycopg2 as pc
 import pandas as pd
 import matplotlib.pyplot as mp
 
+# Here are defination libraries
 from graphs import *
 from menu import maincode
 
@@ -34,6 +36,7 @@ def data_visual():
     5.Show DATA in Shape Graph\n
     6.Show DATA in Histograph\n
     7.Show DATA in Pie Chart\n
+    8.Histograms
     With user_input in it for the sno numbers of the menu\n
     user_input = int(input("Enter the index value of the following choices:"))
     """

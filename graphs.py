@@ -111,7 +111,7 @@ def splitlinegraph():
 
 def splitted_piecharts():
     v = pd.read_csv(
-        "H:\PROGRAMMING\PYTHON\Class 12th Python Project\csv_data\kjpcjs.csv")
+        "kjpcjs.csv")
 
     #  2015
 
@@ -234,7 +234,7 @@ def piecharts():
     this is a piechart
     """
     z = pd.read_csv(
-        "H:\PROGRAMMING\PYTHON\Class 12th Python Project\csv_data\kjpcjs.csv")
+        "kjpcjs.csv")
     lang = ['Kotlin', 'Java', 'Python', 'C++', 'JavaScript']
     i = 0
     av = list()
@@ -256,7 +256,7 @@ def bargraphs():
     this is a bar graph splitted languages
     """
     v = pd.read_csv(
-        "H:\PROGRAMMING\PYTHON\Class 12th Python Project\csv_data\kjpcjs.csv")
+        "kjpcjs.csv")
 
     #  2015
 
@@ -357,7 +357,7 @@ def bargraphs():
 
 def bargraph():
     c = pd.read_csv(
-        "H:\PROGRAMMING\PYTHON\Class 12th Python Project\csv_data\kjpcjs.csv")
+        "kjpcjs.csv")
     lang = ['Kotlin', 'Java', 'Python', 'C++', 'JavaScript']
     avgs = list()
     for i in lang:
@@ -368,3 +368,9 @@ def bargraph():
     plt.bar(lang, avgs)
     plt.show()
 
+def histogram():
+    """
+    We are creating a histograms
+    """
+    a = pd.read_csv("kjpcjs.csv")
+    

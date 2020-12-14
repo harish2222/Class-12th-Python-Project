@@ -16,6 +16,7 @@ def maincode(dbs,usr,pswd):
     """
     Main menu is given here
     """
+    sc = "Select * from programming.coding;"
     print("Database Credentials Passed")
                           # Beter to fill dbconn(with the your credentials)
     db = dbconn(dbs, usr, pswd)
@@ -38,8 +39,8 @@ def maincode(dbs,usr,pswd):
     usr_input = int(input("Enter the Number :\t"))
 
     if usr_input == 1:
-        qry = str(input("Enter the Query:"))
-        cur.execute(qry)
+        ##sc = str(input("Enter the Query:"))
+        cur.execute(sc)
         row = cur.fetchall()
         print(row)
         maincode(datab,usr, pswd)
@@ -56,8 +57,8 @@ def maincode(dbs,usr,pswd):
         c = list()
 
         js = list()
-        qry = str(input("Enter the Query:"))
-        cur.execute(qry)
+        ##sc = str(input("Enter the Query:"))
+        cur.execute(sc)
         row = cur.fetchall()
         for r in row:
 
@@ -82,8 +83,8 @@ def maincode(dbs,usr,pswd):
         c = list()
         js = list()
         t = list()
-        qry = str(input("Enter the Query:"))
-        cur.execute(qry)
+        ##sc = str(input("Enter the Query:"))
+        cur.execute(sc)
         row = cur.fetchall()
         for r in row:
 
@@ -113,7 +114,6 @@ def maincode(dbs,usr,pswd):
 
     elif usr_input == 7:
         exit()
-
     db.close()
 
 

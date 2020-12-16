@@ -3,12 +3,15 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import psycopg2 as pc
 from conn import *
+import gtts
+from gtts import gTTS
 
 
 def wel():
     """
     This is a welcome script
     """
+    
     print("|=====================================Welcome TO HK TRENDS======================================|")
 
 

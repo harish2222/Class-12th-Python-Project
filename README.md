@@ -30,13 +30,13 @@ and change it to
 1. CSV DATA from Google Trends
 2. Postgresql
 
-<code>pip install -r "path of the requirement.txt in double qoutes" 
+<code>pip install -r "{path of the requirement.txt in double qoutes}" </code>
 
 ## Remember I have used a Postgresql Database!!
 ### So make sure if you have the postgresql Database then use it .
 ### This project is specific to the csv files present in csv_data folder
 
-The database table is exact copy of kjpcjs.csv that i have converted to postgresql Database using Import tool Present in the Postgresql PgAdmin v==4.26
+The database table is exact copy of kjpcjs.csv that I have converted to postgresql Database using Import tool Present in the Postgresql PgAdmin v==4.26
 
 ## This includes 
 1. Line graph 

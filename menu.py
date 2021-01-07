@@ -19,7 +19,7 @@ def maincode(dbs,usr,pswd):
     """
     Main menu is given here
     """
-    sc = "Select * from programming.coding;"
+    sc = "SELECT * FROM programming_languages.kpjsc;"
     print("Database Credentials Passed")
                           # Beter to fill dbconn(with the your credentials)
     db = dbconn(dbs, usr, pswd)
@@ -60,7 +60,7 @@ def maincode(dbs,usr,pswd):
         c = list()
 
         js = list()
-        ##sc = str(input("Enter the Query:"))
+        sc = "SELECT * FROM programming_languages.kpjsc"
         cur.execute(sc)
         row = cur.fetchall()
         for r in row:
@@ -121,8 +121,15 @@ def maincode(dbs,usr,pswd):
 
 
 if __name__ == '__main__':
-    datab = str(input("Enter the databse name:\t"))
-    usr = str(input("Enter user crendentials:\t"))
-    pswd = str(input("Enter the Password:\t"))
-    wel()
-    maincode(datab,usr, pswd)
+    print("\tWhich DataBase Connectivity do you Want\n")
+    print("\t1.Mysql")
+    print("\t2.Postgresql")
+    input_data = int(input(prompt="Enter the index of the databse Menu"))
+    if input_data==1:
+        pass
+    elif input_data==2:
+        datab = str(input("Enter the database name:\t"))
+        usr = str(input("Enter user crendentials:\t"))
+        pswd = str(input("Enter the Password:\t"))
+        wel()
+        maincode(datab,usr, pswd)

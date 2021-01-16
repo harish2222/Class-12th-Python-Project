@@ -128,13 +128,39 @@ def mysql_runned_maincode(host, user, passwd, database):
     print("\t\n1.Mysql Raw Data")
     print("\t\n2.Mysql Structure Data")
 
-    usr_input = int(input("Enter the index:\t"))
+    usr_input = int(input("Enter the index:/t"))
 
     if usr_input == 1:
         query = str(input("Enter your query:/t"))
         cur.execute(query)
+        row = cur.fetchall()
+        print(row)
+        mysql_runned_maincode(host, user, passwd, database)
 
+    elif usr_input == 2:
+        query = str(input("Enter The query:\t"))
+        cur.execute(query)
+        w = list()
+        k = list()
+        j = list()
+        p = list()
+        c = list()
+        js = list()
+        row = cur.fetchall()
+        for r in row:
+            w.append(f"{r[0]}")
+            k.append(f"{r[1]}")
+            j.append(f"{r[2]}")
+            p.append(f"{r[3]}")
+            c.append(f"{r[4]}")
+            js.append(f"{r[5]}")
 
+        df = {"WEEK": w, "KOTLIN": k, "JAVA": j,
+              "PYTHON": p, "C++": c, "JAVASCRIPT": js}
+        c = pd.DataFrame(df)
+        print(c)
+        mysql_runned_maincode(host, user, passwd, database)
+    mysqlcon.close()
 
 
 if __name__ == '__main__':

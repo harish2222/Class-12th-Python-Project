@@ -1,6 +1,8 @@
 from conn import *
 from data_analyse import data_analyse_menu
 
+from mysqlcon import datacon
+
 
 def wel():
     """
@@ -47,7 +49,7 @@ def maincode(dbs, usr, pswd):
         data_visual()
 
     elif usr_input == 3:
-        df = dict()
+
         w = list()
         k = list()
         j = list()
@@ -55,7 +57,7 @@ def maincode(dbs, usr, pswd):
         c = list()
 
         js = list()
-        sc = "SELECT * FROM programming_languages.kpjsc"
+        sc = "SELECT * FROM programming_languages.kpjsc;"
         cur.execute(sc)
         row = cur.fetchall()
         for r in row:
@@ -113,13 +115,39 @@ def maincode(dbs, usr, pswd):
     db.close()
 
 
+# noinspection PyGlobalUndefined
+def mysql_runned_maincode(host, user, passwd, database):
+    global mysqlcon
+    try:
+        mysqlcon = datacon(host, user, passwd, database)
+    except:
+        ConnectionAbortedError
+    print(mysqlcon)
+    cur = mysqlcon.cursor()
+
+    print("\t\n1.Mysql Raw Data")
+    print("\t\n2.Mysql Structure Data")
+
+    usr_input = int(input("Enter the index:\t"))
+
+    if usr_input == 1:
+        query = str(input("Enter your query:/t"))
+        cur.execute(query)
+
+
+
+
 if __name__ == '__main__':
     print("\tWhich DataBase Connectivity do you Want\n")
     print("\t1.Mysql")
     print("\t2.Postgresql")
     input_data = int(input("Enter the index of the databse Menu"))
     if input_data == 1:
-        pass
+        host = str(input("Enter hosting address:\t"))
+        database = str(input("Enter the database name:\t"))
+        user = str(input("Enter user crendentials:\t"))
+        passwd = str(input("Enter the Password:\t"))
+        mysql_runned_maincode(host, user, passwd, database)
     elif input_data == 2:
         datab = str(input("Enter the database name:\t"))
         usr = str(input("Enter user crendentials:\t"))

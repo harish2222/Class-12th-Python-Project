@@ -1,6 +1,6 @@
 from conn import *
 from data_analyse import data_analyse_menu
-
+import pymysql as pms
 from mysqlcon import datacon
 
 
@@ -12,6 +12,7 @@ def wel():
     print("|=====================================Welcome TO HK TRENDS======================================|")
 
 
+# noinspection PyShadowingNames
 def maincode(dbs, usr, pswd):
     """
     Main menu is given here
@@ -121,17 +122,19 @@ def mysql_runned_maincode(host, user, passwd, database):
     try:
         mysqlcon = datacon(host, user, passwd, database)
     except:
-        ConnectionAbortedError
+        pms.MySQLError
+
     print(mysqlcon)
     cur = mysqlcon.cursor()
 
     print("\t\n1.Mysql Raw Data")
     print("\t\n2.Mysql Structure Data")
+    print("\t\n3.Exit")
 
-    usr_input = int(input("Enter the index:/t"))
+    usr_input = int(input("Enter the index:\t"))
 
     if usr_input == 1:
-        query = str(input("Enter your query:/t"))
+        query = str(input("Enter your query:\t"))
         cur.execute(query)
         row = cur.fetchall()
         print(row)
@@ -160,6 +163,10 @@ def mysql_runned_maincode(host, user, passwd, database):
         c = pd.DataFrame(df)
         print(c)
         mysql_runned_maincode(host, user, passwd, database)
+
+    if usr_input == 3:
+        exit()
+
     mysqlcon.close()
 
 

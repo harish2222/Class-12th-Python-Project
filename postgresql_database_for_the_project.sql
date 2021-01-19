@@ -3,7 +3,7 @@ CREATE TABLE programming_languages.kpjsc(
   ,Kotlin     INT  NOT NULL
   ,Java       INTEGER  NOT NULL
   ,Python     INTEGER  NOT NULL
-  ,C++          INTEGER  NOT NULL
+  ,C          INTEGER  NOT NULL
   ,JavaScript INTEGER  NOT NULL
 );
 INSERT INTO programming_languages.kpjsc(Week,Kotlin,Java,Python,C,JavaScript) VALUES ('2015-09-13',1,94,10,19,24);

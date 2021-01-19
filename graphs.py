@@ -2,6 +2,7 @@ import time
 
 import matplotlib.pyplot as plt
 import pandas as pd
+import numpy as np
 
 
 def linegraph():
@@ -11,16 +12,16 @@ def linegraph():
     print("Line Graph Initializing")
     time.sleep(5)
     print("Line Graph Launching")
-    a = pd.read_csv("H:\\PROGRAMMING\\PYTHON\\Class 12th Python Project\\csv_data\\kjpcjs.csv")
-    a['Week'] = pd.to_datetime(a['Week'])
-    data_date = a['Week']
-    java_data = a['Java']
-    kotlin_data = a['Kotlin']
-    c_data = a["C++"]
-    p_data = a['Python']
-    js_data = a['JavaScript']
+    c = pd.read_csv("kjpcjs.csv")
+    c['Week'] = pd.to_datetime(c['Week'])
+    data_date = c['Week']
+    java_data = c['Java']
+    kotlin_data = c['Kotlin']
+    c_data = c["C++"]
+    p_data = c['Python']
+    js_data = c['JavaScript']
 
-# Plotting graph here
+    # Plotting graph here
     plt.figure(figsize=(10, 5), dpi=150)
     plt.style.use('seaborn')
     plt.gcf().autofmt_xdate()
@@ -43,7 +44,7 @@ def splitlinegraph():
     """
     print("Split Graph Initalizing")
     time.sleep(3)
-    b = pd.read_csv("H:\\PROGRAMMING\\PYTHON\\Class 12th Python Project\\csv_data\\kjpcjs.csv")
+    b = pd.read_csv("kjpcjs.csv")
     print("Split Line Graph Initialized")
     b['Week'] = pd.to_datetime(b['Week'])
     data_date = b['Week']
@@ -57,7 +58,7 @@ def splitlinegraph():
     plt.style.use('seaborn')
     plt.gcf().autofmt_xdate()
     plt.xlabel("DATE")
-    plt.ylabel("%"+"of People")
+    plt.ylabel("%" + "of People")
     plt.plot(data_date, java_data, "g--", label="Java")
     plt.grid(True)
     plt.legend(loc="best")
@@ -66,7 +67,7 @@ def splitlinegraph():
     plt.style.use('seaborn')
     plt.gcf().autofmt_xdate()
     plt.xlabel("DATE")
-    plt.ylabel("%"+"of People")
+    plt.ylabel("%" + "of People")
     plt.plot(data_date, kotlin_data, 'y--', label="Kotlin")
     plt.grid(True)
     plt.legend(loc="best")
@@ -75,7 +76,7 @@ def splitlinegraph():
     plt.style.use('seaborn')
     plt.gcf().autofmt_xdate()
     plt.xlabel("DATE")
-    plt.ylabel("%"+"of People")
+    plt.ylabel("%" + "of People")
     plt.plot(data_date, c_data, color='cyan', label="C++")
     plt.grid(True)
     plt.legend(loc='best')
@@ -84,7 +85,7 @@ def splitlinegraph():
     plt.style.use('seaborn')
     plt.gcf().autofmt_xdate()
     plt.xlabel("DATE")
-    plt.ylabel("%"+"of People")
+    plt.ylabel("%" + "of People")
     plt.plot(data_date, p_data, color='lightblue', linewidth=2, label="Python")
     plt.grid(True)
     plt.legend(loc='best')
@@ -118,23 +119,23 @@ def splitted_piecharts():
     df1 = v[
         (v['Week'] < '2016-01-01')
     ]
-# 2016
+    # 2016
     df2 = v[
         (v['Week'] > '2016-01-01') & (v['Week'] < '2017-01-01')
-    ]
-#  2017
+        ]
+    #  2017
     df3 = v[
         (v['Week'] > '2017-01-01') & (v['Week'] < '2018-01-01')
-    ]
-# 2018
+        ]
+    # 2018
     df4 = v[
         (v['Week'] > '2018-01-01') & (v['Week'] < '2019-01-01')
-    ]
-# 2019
+        ]
+    # 2019
     df5 = v[
         (v['Week'] > '2019-01-01') & (v['Week'] < '2020-01-01')
-    ]
-# 2020
+        ]
+    # 2020
     df6 = v[
         (v['Week'] > '2020-01-01')
     ]
@@ -146,7 +147,7 @@ def splitted_piecharts():
     for i in lang:
         x = sum(df1[i])
         l = len(df1[i])
-        avges = x/l
+        avges = x / l
         av1.append(avges)
 
     av2 = list()
@@ -154,7 +155,7 @@ def splitted_piecharts():
     for r in lang:
         x = sum(df2[r])
         l = len(df2[r])
-        avges = x/l
+        avges = x / l
         av2.append(avges)
 
     av3 = list()
@@ -162,7 +163,7 @@ def splitted_piecharts():
     for v in lang:
         x = sum(df2[v])
         l = len(df2[v])
-        avges = x/l
+        avges = x / l
         av3.append(avges)
 
     av4 = list()
@@ -170,7 +171,7 @@ def splitted_piecharts():
     for b in lang:
         x = sum(df2[b])
         l = len(df2[b])
-        avges = x/l
+        avges = x / l
         av4.append(avges)
 
     av5 = list()
@@ -178,7 +179,7 @@ def splitted_piecharts():
     for n in lang:
         x = sum(df2[n])
         l = len(df2[n])
-        avges = x/l
+        avges = x / l
         av5.append(avges)
 
     av6 = list()
@@ -186,7 +187,7 @@ def splitted_piecharts():
     for m in lang:
         x = sum(df2[m])
         l = len(df2[m])
-        avges = x/l
+        avges = x / l
         av6.append(avges)
 
     cl = ['orange', 'red', 'lightblue', 'green', 'yellow']
@@ -241,7 +242,7 @@ def piecharts():
     for i in lang:
         x = sum(z[i])
         l = len(z[i])
-        avges = x/l
+        avges = x / l
         av.append(avges)
     cl = ['orange', 'red', 'lightblue', 'green', 'yellow']
     explodes = [0, 0.2, 0, 0, 0.1]
@@ -263,23 +264,23 @@ def bargraphs():
     df1 = v[
         (v['Week'] < '2016-01-01')
     ]
-# 2016
+    # 2016
     df2 = v[
         (v['Week'] > '2016-01-01') & (v['Week'] < '2017-01-01')
-    ]
-#  2017
+        ]
+    #  2017
     df3 = v[
         (v['Week'] > '2017-01-01') & (v['Week'] < '2018-01-01')
-    ]
-# 2018
+        ]
+    # 2018
     df4 = v[
         (v['Week'] > '2018-01-01') & (v['Week'] < '2019-01-01')
-    ]
-# 2019
+        ]
+    # 2019
     df5 = v[
         (v['Week'] > '2019-01-01') & (v['Week'] < '2020-01-01')
-    ]
-# 2020
+        ]
+    # 2020
     df6 = v[
         (v['Week'] > '2020-01-01')
     ]
@@ -291,7 +292,7 @@ def bargraphs():
     for i in lang:
         x = sum(df1[i])
         l = len(df1[i])
-        avges = x/l
+        avges = x / l
         av1.append(avges)
 
     av2 = list()
@@ -299,7 +300,7 @@ def bargraphs():
     for r in lang:
         x = sum(df2[r])
         l = len(df2[r])
-        avges = x/l
+        avges = x / l
         av2.append(avges)
 
     av3 = list()
@@ -307,7 +308,7 @@ def bargraphs():
     for v in lang:
         x = sum(df2[v])
         l = len(df2[v])
-        avges = x/l
+        avges = x / l
         av3.append(avges)
 
     av4 = list()
@@ -315,7 +316,7 @@ def bargraphs():
     for b in lang:
         x = sum(df2[b])
         l = len(df2[b])
-        avges = x/l
+        avges = x / l
         av4.append(avges)
 
     av5 = list()
@@ -323,7 +324,7 @@ def bargraphs():
     for n in lang:
         x = sum(df2[n])
         l = len(df2[n])
-        avges = x/l
+        avges = x / l
         av5.append(avges)
 
     av6 = list()
@@ -331,7 +332,7 @@ def bargraphs():
     for m in lang:
         x = sum(df2[m])
         l = len(df2[m])
-        avges = x/l
+        avges = x / l
         av6.append(avges)
 
     plt.subplot(2, 3, 1)
@@ -363,14 +364,27 @@ def bargraph():
     for i in lang:
         x = sum(c[i])
         l = int(len(c[i]))
-        avges = x/l
+        avges = x / l
         avgs.append(avges)
     plt.bar(lang, avgs)
     plt.show()
+
 
 def histogram():
     """
     We are creating a histograms
     """
     a = pd.read_csv("kjpcjs.csv")
-    
+    b = np.linspace(0, 150, 15)
+
+    plt.hist(a['Kotlin'], edgecolor='orange')
+    plt.hist(a['Java'], edgecolor='yellow')
+    plt.hist(a['Python'], edgecolor='green')
+    plt.hist(a['C++'], edgecolor='blue')
+    plt.hist(a['JavaScript'], edgecolor='violet')
+    plt.legend(['Kotlin', 'Java', 'Python', 'C++', 'JavaScript'], loc='best')
+    plt.show()
+
+
+if __name__ == "__main__":
+    histogram()

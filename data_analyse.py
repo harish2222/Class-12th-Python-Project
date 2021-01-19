@@ -1,5 +1,5 @@
 import pandas as pd
-import psycopg2 as pc
+
 
 
 def data_analyse_menu():

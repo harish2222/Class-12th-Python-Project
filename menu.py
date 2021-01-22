@@ -4,6 +4,7 @@ import pymysql as pms
 from mysqlcon import datacon
 import getpass
 import pandas as pd
+import pymysql as pm
 
 
 def wel():
@@ -26,22 +27,17 @@ def maincode(dbs, usr, pswd):
 
     cur = db.cursor()
 
-    print("\t\tEnter--2--Show Graphical Data\n")
+    print("\t\tEnter--1--Show DATA from CSV\n")
 
-    print("\t\tEnter--5--Show DATA from CSV\n")
+    print("\t\tEnter--2--Show DATA From Postgresql\n")
 
-    print("\t\tEnter--6--Data Analysis\n")
-
-    print("\t\tEnter--3--Show DATA From Postgresql\n")
-
-    print("\t\tEnter--7--Exit\n")
+    print("\t\tEnter--3--Exit\n")
 
     usr_input = int(input("Enter the Number :\t"))
 
-    if usr_input == 2:
-        data_visual()
+    
 
-    if usr_input == 3:
+    if usr_input == 1:
 
         w = list()
         k = list()
@@ -68,31 +64,22 @@ def maincode(dbs, usr, pswd):
         maincode(datab, usr, pswd)
 
 
-    elif usr_input == 5:
-        csv_data = pd.read_csv(
-            "kjpcjs.csv")
-        print(csv_data)
-        maincode(datab, usr, pswd)
-    elif usr_input == 6:
+    
+    elif usr_input == 2:
         data_analyse_menu()
         maincode(datab, usr, pswd)
 
-    elif usr_input == 7:
+    elif usr_input == 3:
         exit()
     db.close()
 
 
 # noinspection PyGlobalUndefined
 def mysql_runned_maincode(host, user, passwd, database):
-    global mysqlcon
-    try:
-        mysqlcon = datacon(host, user, passwd, database)
-    except:
-        var = pms.MySQLError
-        print(var)
-
-    print(mysqlcon)
-    cur = mysqlcon.cursor()
+    
+    conn = pm.connect(host, user, passwd, database)
+    
+    cur = conn.cursor()
 
     print("\t\n1.Mysql Raw Data")
     print("\t\n2.Mysql Structure Data")
@@ -134,7 +121,7 @@ def mysql_runned_maincode(host, user, passwd, database):
     if usr_input == 3:
         exit()
 
-    mysqlcon.close()
+    conn.close()
 
 
 if __name__ == '__main__':
@@ -142,12 +129,15 @@ if __name__ == '__main__':
     print("\t1.Mysql\n")
     print("\t2.Postgresql\n")
     print("\t3.Csv Data\n")
+    print("\t4.Grphical Representation\n")
+    print("\t5.Data Analysis\n")
+    print("\t6.Exit\n")
     input_data = int(input("Enter the index of the databse Menu:\t"))
     if input_data == 1:
         host = str(input("Enter hosting address:\t"))
         database = str(input("Enter the database name:\t"))
         user = str(input("Enter user crendentials:\t"))
-        passwd = str(getpass.getpass("Enter user Password"))
+        passwd = str(getpass.getpass("Enter user Password:\t"))
         mysql_runned_maincode(host, user, passwd, database)
     elif input_data == 2:
         datab = str(input("Enter the database name:\t"))
@@ -156,4 +146,14 @@ if __name__ == '__main__':
         wel()
         maincode(datab, usr, pswd)
     elif input_data == 3:
-        pass
+        csv_data = pd.read_csv("kjpcjs.csv")
+        print(csv_data)
+    elif input_data == 4:
+        data_visual()
+    elif input_data == 5:
+        data_analyse_menu()
+    elif input_data == 6:
+        exit()
+    else:
+        exit()        
+        

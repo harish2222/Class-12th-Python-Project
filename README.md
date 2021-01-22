@@ -42,6 +42,7 @@ The database table is exact copy of kjpcjs.csv that I have converted to postgres
 1. Line graph 
 2. Bar Graphs
 3. Pie Charts
+4. Histogram 
 
 ## Updates will be done soon.
 ## To add more Functionality

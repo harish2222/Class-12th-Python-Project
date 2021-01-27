@@ -386,5 +386,22 @@ def histogram():
     plt.show()
 
 
-if __name__ == "__main__":
-    histogram()
+def seperated_hist():
+    a = pd.read_csv("kjpcjs.csv")
+
+
+    plt.subplot(2, 3, 1)
+    plt.hist(a['Kotlin'], edgecolor='orange')
+    plt.subplot(2, 3, 2)
+    plt.hist(a['Java'], edgecolor='yellow')
+    plt.subplot(2, 3, 3)
+    plt.hist(a['Python'], edgecolor='green')
+    plt.subplot(2, 3, 4)
+    plt.hist(a['C++'], edgecolor='blue')
+    plt.subplot(2, 3, 5)
+    plt.hist(a['JavaScript'], edgecolor='violet')
+
+    plt.legend(['Kotlin', 'Java', 'Python', 'C++', 'JavaScript'], loc='best')
+    plt.show()
+
+

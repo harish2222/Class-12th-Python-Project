@@ -1,11 +1,11 @@
-# Here are python libraries 
+# Here are python libraries
+from xxlimited import Null
+
 import psycopg2 as pc
-import pandas as pd
-import matplotlib.pyplot as mp
 
 # Here are defination libraries
 from graphs import *
-from menu import maincode
+
 
 
 def dbconn(db, usr, pswd):
@@ -13,17 +13,6 @@ def dbconn(db, usr, pswd):
     return dbc
 
 
-# def mysql_conn(parameter_list):
-#     """
-#     this module is for mysql connectivity
-#     """
-#     mydb = mysql.connector.connect(
-#         host = "localhost",
-#         user = "root",
-#         password = "mysql",
-#         database = "google_trends",
-#         port = 3306
-#     )
 
 def data_visual():
     """
@@ -47,7 +36,9 @@ def data_visual():
     print("\t\t4.Show DATA in Splitted Bar Graphs\n")
     print("\t\t5.Show DATA in Splitted Pie Chart\n")
     print("\t\t6.Show DATA in Pie Chart\n")
-    print("\t\t7.EXIT\n")
+    print("\t\t7.Show DATA in Histogram")
+    print("\t\t8.Show DATA in Splitted Histogram")
+    print("\t\t9.EXIT\n")
 
     user_input = int(input("Enter the index value of the following choices:"))
 
@@ -77,9 +68,17 @@ def data_visual():
         data_visual()
 
     elif user_input == 7:
+        histogram()
+        data_visual()
+
+    elif user_input == 8:
+        seperated_hist()
+        data_visual()
+
+    elif user_input == 9:
         exit()
 
-    elif user_input == "Null":
+    elif user_input == Null:
         print("Invalid request")
         data_visual()
 

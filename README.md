@@ -29,7 +29,7 @@ and change it to <br> "pandas"
 1. CSV DATA from Google Trends
 2. Postgresql
 
-###`pip install -r "{path of the requirement.txt in double qoutes}"`
+`pip install -r "{path of the requirement.txt in double qoutes}"`
 
 ## Remember I have used a Postgresql Database!!
 ### So make sure if you have the Postgresql installed Database then use it .

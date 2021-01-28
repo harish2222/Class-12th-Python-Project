@@ -57,9 +57,6 @@ def maincode(dbs, usr, pswd):
         print(c)
         maincode(datab, usr, pswd)
 
-
-
-
     elif usr_input == 2:
         exit()
     db.close()

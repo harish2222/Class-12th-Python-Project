@@ -404,4 +404,3 @@ def seperated_hist():
     plt.legend(['Kotlin', 'Java', 'Python', 'C++', 'JavaScript'], loc='best')
     plt.show()
 
-

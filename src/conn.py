@@ -1,12 +1,7 @@
 # Here are python libraries
-from xxlimited import Null
-
 import psycopg2 as pc
-
 # Here are defination libraries
 from graphs import *
-
-
 
 def dbconn(db, usr, pswd):
     dbc = pc.connect(host="localhost", database=db, user=usr, password=pswd)
@@ -78,7 +73,7 @@ def data_visual():
     elif user_input == 9:
         exit()
 
-    elif user_input == Null:
+    elif user_input == "Null":
         print("Invalid request")
         data_visual()
 

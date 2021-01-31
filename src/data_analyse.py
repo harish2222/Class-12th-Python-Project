@@ -23,7 +23,7 @@ def maxima():
     find maximum of the data
     """
     v = pd.read_csv(
-        "kjpcjs.csv")
+        "src\kjpcjs.csv")
     lang = ['Kotlin', 'Java', 'Python', 'C++', 'JavaScript']
     mx = list()
     for i in lang:
@@ -32,6 +32,7 @@ def maxima():
 
     for i in range(0, 5):
         print(lang[i], "minimum gross is", mx[i])
+    data_analyse_menu()    
 
 
 def minima():
@@ -39,7 +40,7 @@ def minima():
     This is a minima value 
     """
     v = pd.read_csv(
-        "kjpcjs.csv")
+        "src\kjpcjs.csv")
     lang = ['Kotlin', 'Java', 'Python', 'C++', 'JavaScript']
     mx = list()
     for i in lang:
@@ -48,3 +49,4 @@ def minima():
 
     for i in range(0, 5):
         print(lang[i], "minimum gross is", mx[i])
+    data_analyse_menu()

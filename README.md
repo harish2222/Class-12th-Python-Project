@@ -48,5 +48,5 @@ The database table is exact copy of kjpcjs.csv that I have converted to postgres
 
 ## License && Copyright
 
-© Harish , HK-Devs [MIT LICENSE](LICENSE)
+© Harish , HK-Devs [MIT LICENSE](src/LICENSE)
 

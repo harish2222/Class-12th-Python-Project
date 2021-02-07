@@ -46,6 +46,17 @@ The database table is exact copy of kjpcjs.csv that I have converted to postgres
 ## Updates will be done soon.
 ## To add more Functionality
 
+#### Now Docker has been added to get perfect environment to develop
+### For docker Image you must have Docker Installled in your system
+## If your have Windows 7 , 8 and 10 Home then install this
+http://docs.docker.oeynet.com/toolbox/toolbox_install_windows/
+
+## If you have Linux , Mac or Windows 10 Pro or other version of Windows then download Docker from 
+https://www.docker.com/products/docker-desktop 
+
+To get Docker Image for this project type this in Terminal or CMD
+
+<br>
 ## License && Copyright
 
 © Harish , HK-Devs [MIT LICENSE](src/LICENSE)

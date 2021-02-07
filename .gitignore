@@ -3,3 +3,4 @@ __pycache__
 .vscode
 class12thproject.code-workspace
 DOCKERFILE
+.dockerignore

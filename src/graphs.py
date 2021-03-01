@@ -12,7 +12,7 @@ def linegraph():
     print("Line Graph Initializing")
     time.sleep(5)
     print("Line Graph Launching")
-    c = pd.read_csv("kjpcjs.csv")
+    c = pd.read_csv("src\kjpcjs.csv")
     c['Week'] = pd.to_datetime(c['Week'])
     data_date = c['Week']
     java_data = c['Java']
@@ -44,7 +44,7 @@ def splitlinegraph():
     """
     print("Split Graph Initalizing")
     time.sleep(3)
-    b = pd.read_csv("kjpcjs.csv")
+    b = pd.read_csv("src\kjpcjs.csv")
     print("Split Line Graph Initialized")
     b['Week'] = pd.to_datetime(b['Week'])
     data_date = b['Week']
@@ -112,7 +112,7 @@ def splitlinegraph():
 
 def splitted_piecharts():
     v = pd.read_csv(
-        "kjpcjs.csv")
+        "src\kjpcjs.csv")
 
     #  2015
 
@@ -235,7 +235,7 @@ def piecharts():
     this is a piechart
     """
     z = pd.read_csv(
-        "kjpcjs.csv")
+        "src\kjpcjs.csv")
     lang = ['Kotlin', 'Java', 'Python', 'C++', 'JavaScript']
     i = 0
     av = list()
@@ -257,7 +257,7 @@ def bargraphs():
     this is a bar graph splitted languages
     """
     v = pd.read_csv(
-        "kjpcjs.csv")
+        "src\kjpcjs.csv")
 
     #  2015
 
@@ -358,7 +358,7 @@ def bargraphs():
 
 def bargraph():
     c = pd.read_csv(
-        "kjpcjs.csv")
+        "src\kjpcjs.csv")
     lang = ['Kotlin', 'Java', 'Python', 'C++', 'JavaScript']
     avgs = list()
     for i in lang:
@@ -374,7 +374,7 @@ def histogram():
     """
     We are creating a histograms
     """
-    a = pd.read_csv("kjpcjs.csv")
+    a = pd.read_csv("src\kjpcjs.csv")
     b = np.linspace(0, 150, 15)
 
     plt.hist(a['Kotlin'], edgecolor='orange')
@@ -387,7 +387,7 @@ def histogram():
 
 
 def seperated_hist():
-    a = pd.read_csv("kjpcjs.csv")
+    a = pd.read_csv("src\kjpcjs.csv")
 
 
     plt.subplot(2, 3, 1)

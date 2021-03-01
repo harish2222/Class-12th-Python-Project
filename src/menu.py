@@ -78,7 +78,7 @@ if __name__ == '__main__':
         wel()
         maincode(datab, usr, pswd)
     elif input_data == 2:
-        csv_data = pd.read_csv("kjpcjs.csv")
+        csv_data = pd.read_csv("src\kjpcjs.csv")
         print(csv_data)
     elif input_data == 3:
         data_visual()

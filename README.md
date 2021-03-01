@@ -37,7 +37,7 @@ and change it to <br> "pandas"
 ### So make sure if you have the Postgresql installed Database then use it .
 ### This project is specific to the csv files present in csv_data folder
 
-The database table is exact copy of kjpcjs.csv that I have converted to postgresql Database using Import tool Present in the Postgresql PgAdmin v==4.26
+The database table is exact copy of src\kjpcjs.csv that I have converted to postgresql Database using Import tool Present in the Postgresql PgAdmin v==4.26
 
 ## This includes 
 1. Line graph 

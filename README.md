@@ -1,4 +1,3 @@
-[![Gitpod ready-to-code]
 # This is A Complex Class 12th Python Project #
 
 ** Version 1.1.0

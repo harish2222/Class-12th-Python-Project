@@ -5,3 +5,4 @@ psycopg2
 gTTS
 SpeechRecognition
 PyAudio
+pytest

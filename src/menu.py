@@ -22,7 +22,7 @@ def maincode(dbs, usr, pswd):
     db = dbconn(dbs, usr, pswd)
 
     cur = db.cursor()
-
+    
     
 
     print("\t\tEnter--1--Show DATA From Postgresql\n")

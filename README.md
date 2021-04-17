@@ -1,5 +1,3 @@
-[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/harish2222/Class-12th-Python-Project)
-
 # This is A Complex Class 12th Python Project #
 
 ** Version 1.1.0

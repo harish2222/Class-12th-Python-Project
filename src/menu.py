@@ -1,13 +1,64 @@
 from conn import *
 from data_analyse import data_analyse_menu
-
+import speech_recognition as sr
 import pandas as pd
+# import gtts as gt
+
+
+def menus():
+    print("\tWhich DataBase Connectivity do you Want\n")
+    print("\t1.Postgresql\n")
+    print("\t2.Csv Data\n")
+    print("\t3.Grphical Representation\n")
+    print("\t4.Data Analysis\n")
+    print("\t5.Exit\n")
+    input_data = int(input("Enter the index of the databse Menu:\t"))
+    if input_data == 1:
+        datab = str(input("Enter the database name:\t"))
+        usr = str(input("Enter user crendentials:\t"))
+        pswd = str(input("Enter user Password"))
+        wel()
+        maincode(datab, usr, pswd)
+    elif input_data == 2:
+        csv_data = pd.read_csv('src\\kjpcjs.csv')
+        print(csv_data)
+    elif input_data == 3:
+        data_visual()
+    elif input_data == 4:
+        data_analyse_menu()
+    elif input_data == 5:
+        exit()
+    else:
+        exit()
+
+
+
+
+
+
+
+
+
+def get_audio():
+    r = sr.Recognizer()
+    with sr.Microphone() as source:
+        audio = r.listen(source)
+        said = ''
+
+        try:
+            said = r.recognize_google(audio)
+            print(said)
+        except Exception as e:
+            print("Exception : " + str(e))
+    return said
+
+
+
 
 def wel():
     """
     This is a welcome script
     """
-
     print("|=====================================Welcome TO HK TRENDS======================================|")
 
 
@@ -17,13 +68,10 @@ def maincode(dbs, usr, pswd):
     Main menu is given here
     with Mainly postgres and other csv action
     """
-    sc = "SELECT * FROM programming_languages.kpjsc;"
 
     db = dbconn(dbs, usr, pswd)
 
     cur = db.cursor()
-    
-    
 
     print("\t\tEnter--1--Show DATA From Postgresql\n")
 
@@ -62,29 +110,6 @@ def maincode(dbs, usr, pswd):
     db.close()
 
 
+
 if __name__ == '__main__':
-    print("\tWhich DataBase Connectivity do you Want\n")
-    print("\t1.Postgresql\n")
-    print("\t2.Csv Data\n")
-    print("\t3.Grphical Representation\n")
-    print("\t4.Data Analysis\n")
-    print("\t5.Exit\n")
-    input_data = int(input("Enter the index of the databse Menu:\t"))
-    if input_data == 1:
-        datab = str(input("Enter the database name:\t"))
-        usr = str(input("Enter user crendentials:\t"))
-        pswd = str(input("Enter user Password"))
-        wel()
-        maincode(datab, usr, pswd)
-    elif input_data == 2:
-        csv_data = pd.read_csv("src\kjpcjs.csv")
-        print(csv_data)
-    elif input_data == 3:
-        data_visual()
-    elif input_data == 4:
-        data_analyse_menu()
-    elif input_data == 5:
-        exit()
-    else:
-        exit()
-    
+    menus()

@@ -4,3 +4,4 @@ __pycache__
 class12thproject.code-workspace
 DOCKERFILE
 .dockerignore
+sample.py
